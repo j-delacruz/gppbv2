@@ -16,7 +16,9 @@
 	<li><%= link_to "Register", new_user_registration_url %></li>
 	<% end %>
 </ul>
-
+	<%= admins_only do %>
+	<li><%= link_to "Admin", admin_root_url %></li>
+	<% end %>
 <ul>
 	<li><%= link_to "Agency", agencies_url %></li>
 </ul>
