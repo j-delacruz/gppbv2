@@ -8,8 +8,13 @@
 </head>
 <body>
 <ul>
+	<% if user_signed_in? %>
+	<li><%= current_user.email %></li>
+	<li><%= link_to "Logout", destroy_user_session_url, method: :delete %></li>
+	<% else %>
 	<li><%= link_to "Login", '#' %></li>
 	<li><%= link_to "Register", '#' %></li>
+	<% end %>
 </ul>
 <%= yield %>
 
