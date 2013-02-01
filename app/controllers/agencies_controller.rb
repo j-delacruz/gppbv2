@@ -1,5 +1,6 @@
 class AgenciesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :authorize_admin!
   # GET /agencies
   # GET /agencies.json
   def index

@@ -9,6 +9,14 @@
   <%= @agency.security_code %>
 </p>
 
-
 <%= link_to 'Edit', edit_agency_path(@agency) %> |
 <%= link_to 'Back', agencies_path %>
+
+<br>
+<%= link_to "Add User", new_agency_user_url(@agency) %>
+
+<ul>
+	<% @agency.users.each do |user| %>
+	<li><%= user.email %></li>
+	<% end %>
+</ul>

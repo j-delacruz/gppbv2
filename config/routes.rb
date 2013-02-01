@@ -3,7 +3,9 @@ Gppbv2::Application.routes.draw do
 
   devise_for :users
 
-  resources :agencies
+  resources :agencies do
+    resources :users
+  end 
 
   namespace :admin do
     root to: "base#index"
