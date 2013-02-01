@@ -1,16 +1,29 @@
 <h2>Sign up</h2>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+ 
 
   <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :required => true %>
-    <%= f.input :password_confirmation, :required => true %>
+  	<p>
+  		<%= f.label :agency_id %>
+  		<%= f.select :agency_id, Agency.all.map{ |a| [a.name, a.id] } %>
+  	</p>
+  	<p>
+  		<%= f.label :email %>
+  		<%= f.email_field :email %>
+  	</p>
+  	<p>
+  		<%= f.label :password %>
+  		<%= f.password_field :password %>
+  	</p>
+  	<p>
+  		<%= f.label :password_confirmation %>
+  		<%= f.password_field :password_confirmation %>
+  	</p>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
