@@ -4,11 +4,11 @@
   <title><%= full_title(yield(:title)) %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag "bootstrap-responsive.min.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <!--<ul>
 	<% if user_signed_in? %>
 	<li><%= current_user.email %></li>
@@ -59,13 +59,23 @@
       <div class="container">
         <%= yield %>
       </div>
-  </div>
+    </div>
 
 <script type="text/javascript">
   $("#login-button").click(function(){
     if ($("#login").is(":hidden")) {
       $("#fliptrip-join").slideUp("slow");
-      $("#fliptrip-forgot").slideUp("slow");
+      $("#forgot").slideUp("slow");
+      $("#login").slideDown("slow");} 
+    else {
+	  $("#login").slideUp("slow");
+	  $("#fliptrip-join").hide();}
+  });
+
+  $("#back-to-login").click(function(){
+    if ($("#login").is(":hidden")) {
+      $("#fliptrip-join").slideUp("slow");
+      $("#forgot").slideUp("slow");
       $("#login").slideDown("slow");} 
     else {
 	  $("#login").slideUp("slow");
@@ -80,29 +90,33 @@
     $("#fliptrip-join").slideUp("slow");
   });
 
-  $("#hide-forgot-button").click(function(){
-	$("#fliptrip-forgot").slideUp("slow");
+  $("#hide-forgot-password").click(function(){
+	$("#forgot").slideUp("slow");
   });
 
   $("#join-button").click(function(){
 	if ($("#fliptrip-join").is(":hidden")) {
+	  
 	  $("#login").slideUp("slow");
-	  $("#fliptrip-forgot").slideUp("slow");
+	  $("#forgot").slideUp("slow");
 	  $("#fliptrip-join").slideDown("slow");}
 	else {
 	  $("#login").hide();
 	  $("#fliptrip-join").slideUp("slow");}
   });
 
+
+ 
+
   $("#forgot-button").click(function(){
-	if ($("#fliptrip-forgot").is(":hidden")) {
+	if ($("#forgot").is(":hidden")) {
 	  $("#login").slideUp("slow");
 	  $("#fliptrip-join").slideUp("slow");
-	  $("#fliptrip-forgot").slideDown("slow");}
+	  $("#forgot").slideDown("slow");}
 	else {
 	  $("#login").hide();
 	  $("#fliptrip-join").hide();
-	  $("#fliptrip-forgot").slideUp("slow");}
+	  $("#forgot").slideUp("slow");}
 	});
 </script>
 </body>
