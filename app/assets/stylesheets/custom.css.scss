@@ -1,0 +1,20 @@
+$navbarBackground:                #2989d8 ;
+$navbarBackgroundHighlight:       #7db9e8 ;
+$navbarText:                      #f9ed9d ;
+$navbarLinkColor:                 #ffffff ;
+$navbarSearchPlaceholderColor:    #EEC844 ;
+$black:							  #000000 ;
+$baseFontSize:					  12px    ;
+$baseFontFamily:	              Helvetica;
+$textColor:						  #000000 ;
+
+@import "bootstrap";
+
+.navbar,.navbar-inner{
+	width:100%;
+}
+
+.alert{
+	margin-left:1%;
+	margin-top:-2%;
+}

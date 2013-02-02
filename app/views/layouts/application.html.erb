@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Gppbv2</title>
+  <title><%= full_title(yield(:title)) %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "bootstrap-responsive.min.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<ul>
+<!--<ul>
 	<% if user_signed_in? %>
 	<li><%= current_user.email %></li>
 	<li><%= link_to "Logout", destroy_user_session_url, method: :delete %></li>
@@ -23,6 +25,85 @@
 	<li><%= link_to "Agency", agencies_url %></li>
 </ul>
 <%= yield %>
+-->
 
+	<div class="row">
+      <section class="slide" id="login" data-section="3" class="span12">
+        <div class="container" id="slide-container">
+          <div class="pull-right">
+            <a href="javascript:{}" data-section="1" class="close-icon" id="hide-login-button">X</a>
+          </div>
+          <%= render 'devise/sessions/form' %>
+        </div>
+      </section>
+
+      <section class="slide" id="forgot" data-section="3" class="span12">
+        <div class="container" id="slide-container">
+          <div class="pull-right">
+             <a href="javascript:{}" data-section="1" class="close-icon" id="hide-forgot-password">X</a>
+          </div>
+          <%= render 'devise/passwords/form' %>
+        </div>
+      </section>
+
+      <section class="slide" id="register" data-section="3" class="span12 login-window">
+      <div class="container" id="slide-container">
+            <div class="pull-right">
+            <a href="javascript:{}" data-section="1" class="close-icon" id="hide-join-button">X</a>
+          </div>
+          <%= render 'devise/registrations/form' %>
+      </div>  
+      </section>
+      <%= render 'layouts/shared/header' %>
+      <%= render 'layouts/shared/alert' %>
+      <div class="container">
+        <%= yield %>
+      </div>
+  </div>
+
+<script type="text/javascript">
+  $("#login-button").click(function(){
+    if ($("#login").is(":hidden")) {
+      $("#fliptrip-join").slideUp("slow");
+      $("#fliptrip-forgot").slideUp("slow");
+      $("#login").slideDown("slow");} 
+    else {
+	  $("#login").slideUp("slow");
+	  $("#fliptrip-join").hide();}
+  });
+
+  $("#hide-login-button").click(function(){
+    $("#login").slideUp("slow");
+  });
+
+  $("#hide-join-button").click(function(){
+    $("#fliptrip-join").slideUp("slow");
+  });
+
+  $("#hide-forgot-button").click(function(){
+	$("#fliptrip-forgot").slideUp("slow");
+  });
+
+  $("#join-button").click(function(){
+	if ($("#fliptrip-join").is(":hidden")) {
+	  $("#login").slideUp("slow");
+	  $("#fliptrip-forgot").slideUp("slow");
+	  $("#fliptrip-join").slideDown("slow");}
+	else {
+	  $("#login").hide();
+	  $("#fliptrip-join").slideUp("slow");}
+  });
+
+  $("#forgot-button").click(function(){
+	if ($("#fliptrip-forgot").is(":hidden")) {
+	  $("#login").slideUp("slow");
+	  $("#fliptrip-join").slideUp("slow");
+	  $("#fliptrip-forgot").slideDown("slow");}
+	else {
+	  $("#login").hide();
+	  $("#fliptrip-join").hide();
+	  $("#fliptrip-forgot").slideUp("slow");}
+	});
+</script>
 </body>
 </html>
