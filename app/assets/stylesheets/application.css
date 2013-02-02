@@ -59,6 +59,7 @@ text-decoration:none;
 html,body{
 	padding-top: 0;
 	padding-bottom: 15px;
+	overflow: hidden;
 	width:100%;
 	height:100%;
 	
@@ -68,18 +69,14 @@ html,body{
 	background:url('../assets/subtle_dots.png');
 	background-attachment: fixed;
 	width:100%;
-	height:400px;
-	position: relative;
+	height:323px;
 	overflow: hidden;
 }
-
-
-
-
 
 #login{
 	display:none;
 	height: 323px;
+	width:auto;
 	overflow: hidden;
 	
 }
@@ -87,14 +84,16 @@ html,body{
 #forgot{
 	display:none;
 	height: 323px;
+	width:auto;
 	overflow: hidden;
-	position:static;
+	
 }
 
 #fliptrip-join{
 	display:none;
 	height: 323px;
-	
+	width:auto;
+	overflow: hidden;	
 }
 
 
@@ -104,6 +103,7 @@ html,body{
 	height:323px;
 	float:none;
 	margin-top: -3.5%;
+	overflow: hidden;
 }
 
 
@@ -114,6 +114,7 @@ html,body{
 	position: relative;
 	left:13%;
 	top:15%;
+	overflow: hidden;
 }
 
 .forgot-form{
@@ -122,6 +123,7 @@ html,body{
 	position: relative;
 	left:13%;
 	top:15%;
+	overflow: hidden;
 }
 
 
@@ -131,6 +133,7 @@ html,body{
 	position: relative;
 	left:13%;
 	top:11%;
+	overflow: hidden;
 }
 
 .login_email,.login_pass{

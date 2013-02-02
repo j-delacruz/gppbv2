@@ -10,9 +10,9 @@ $textColor:						  #000000 ;
 
 @import "bootstrap";
 
-.navbar,.navbar-inner{
+.navbar{
 	width:100%;
-	height:auto;
+	height:100%;
 	overflow:hidden;
 	overflow-y:hidden;
 	position:static;
