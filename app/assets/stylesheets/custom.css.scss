@@ -12,7 +12,10 @@ $textColor:						  #000000 ;
 
 .navbar,.navbar-inner{
 	width:100%;
+	height:auto;
 	overflow:hidden;
+	overflow-y:hidden;
+	position:static;
 }
 
 .alert{
