@@ -10,6 +10,7 @@ $textColor:						  #000000 ;
 
 @import "bootstrap";
 
+/* Header Menu */
 .navbar{
 	width:100%;
 	height:100%;
@@ -18,7 +19,9 @@ $textColor:						  #000000 ;
 	position:static;
 }
 
+/* Alert Message */
+
 .alert{
 	margin-left:1%;
-	margin-top:-2%;
+
 }

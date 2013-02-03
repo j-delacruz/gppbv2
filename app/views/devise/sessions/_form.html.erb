@@ -1,27 +1,20 @@
 <div id="postit">
-
-
-<%= simple_form_for(resource, :as => resource_name,:url => session_path(resource_name),:html => { :class => 'login-form' }) do |f| %>
-  <h3>Login</h3>
-  <div class="form-inputs">
-    <%= f.text_field :email, :required => false, :autofocus => true, :placeholder=>"Username", :class=>"login_email" %>
-    <br/>
-    <%= f.password_field :password, :required => false, :placeholder=>"Password", :class=>"login_pass" %>
-    <br/>
-    <%= f.check_box :remember_me, :as => :boolean if devise_mapping.rememberable? %>Remember Me
-    <br/>
-    <br/>
-    <%= f.button :submit, "Sign in", :class=>"btn btn-primary" %>
-    <br/>
-    <br/>
+  <%= simple_form_for(resource, :as => resource_name,:url => session_path(resource_name),:html => { :class => 'login-form' }) do |f| %>
+    <h3>Login</h3>
+    <div class="form-inputs">
+      <%= f.text_field :email, :required => false, :autofocus => true, :placeholder=>"Username", :class=>"login_email" %>
+      <br class="clearfix"/>
+      <%= f.password_field :password, :required => false, :placeholder=>"Password", :class=>"login_pass" %>
+      <br class="clearfix"/>
+      <%= f.check_box :remember_me, :as => :boolean if devise_mapping.rememberable? %>Remember Me
+      <br class="clearfix"/>
+      <br class="clearfix"/>
+      <%= f.button :submit, "Sign in", :class=>"btn btn-primary" %>
+       <br class="clearfix"/>
+      <br class="clearfix"/>
     <%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
-  <a href="javascript:{}" data-section="3" class="links tableft" id="forgot-button">Forgot your password?</a>
-<% end -%>
-  </div>
-
-  <div>
-    
-    
-  </div>
-<% end %>
+      <a href="javascript:{}" data-section="3" class="links tableft" id="forgot-button">Forgot your password?</a>
+    <% end -%>
+    </div>
+  <% end %>
 </div>

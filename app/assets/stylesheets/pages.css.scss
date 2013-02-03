@@ -1,3 +1,137 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Sign In, Register and Forgot Password */
+
+.slide{
+	background:url('../assets/subtle_dots.png');
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+
+#login{
+	display:none;
+	height: auto;
+	width:auto;
+	overflow: hidden;
+	.login-form{
+		width:339px;
+		height:auto;
+		position: relative;
+		left:13%;
+		top:7%;
+		overflow: hidden;
+
+		.login_email,.login_pass{
+			width:250px;
+			height:30px;
+			font-size:16px;
+			font-weight: bold;
+		}
+	}
+	
+}
+
+#forgot{
+	display:none;
+	height: auto;
+	width:auto;
+	overflow: hidden;
+	.forgot-form{
+		width:339px;
+		height:275px;
+		position: relative;
+		left:13%;
+		margin-top: 7%;
+		overflow: hidden;
+
+		.email-forgot{
+			width:250px;
+			height:30px;
+			font-size:16px;
+			font-weight:bold;
+		}
+	}
+}
+
+#register{
+	display:none;
+	height: auto;
+	width:auto;
+	overflow: hidden;	
+	.register-form{
+		width:339px;
+		height:auto;
+		position: relative;
+		left:13%;
+		top:7%;
+		overflow: hidden;
+
+		.register_email, .register_pass, .register_conf_pass{
+			width:250px;
+			height:20px;
+			font-size:13px;
+			font-weight: bold;
+		}	
+		#user_agency_id{
+			width:265px;
+			height:30px;
+			font-size:13px;
+			font-weight: bold;
+		}
+	}
+}
+
+
+#postit{
+	background: url('../assets/postit2.png');
+	width: 339px;
+	height:auto;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.close-icon{
+position: absolute;
+width: 35px;
+height: 35px;
+margin-top: -1px;
+font-size: 15px;
+font-weight: 700;
+line-height: 30px;
+color: white;
+text-align: center;
+background: #000;
+border: 3px solid white;
+-webkit-border-radius: 23px;
+-moz-border-radius: 23px;
+border-radius: 23px;
+-webkit-border-radius: 23px;
+-moz-border-radius: 23px;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;}
+
+.close-icon:hover {
+background: #333;
+color: #fff;
+opacity: 0.9;
+filter: alpha(opacity=100);
+opacity: 0.9;
+filter: alpha(opacity=100);
+text-decoration:none;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+
+}
+
+
+#slide-container{
+	height:100%;
+}

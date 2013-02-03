@@ -1,0 +1,16 @@
+<div id="postit">
+        <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :class=>"forgot-form", :method => :post }) do |f| %>
+                <h4>Forgot your password?</h4>
+                <br class="clearfix"/>
+                <br class="clearfix"/>
+                <%= f.error_notification %>
+                <div class="form-inputs">
+                        <%= f.text_field :email, :required => true, :autofocus => true, :placeholder=>"Email Address",:class=>"email-forgot" %>
+                </div>
+                <div>
+                        <br class="clearfix"/>
+                        <br class="clearfix"/>
+                        <%= f.button :submit, "Recover Password", :class=>"btn btn-primary" %> <a href="javascript:{}" data-section="1" class="btn btn-primary" id="back-to-login">Back to Login</a>
+                </div>
+        <% end %>
+</div>
