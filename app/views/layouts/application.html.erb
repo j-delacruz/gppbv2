@@ -62,80 +62,15 @@
       </div>
     </div>
 
-<script type="text/javascript">
-  $("#login-button").click(function(){
-    if ($("#login").is(":hidden")) {
-      $("#fliptrip-join").slideUp("slow");
-      $("#forgot").slideUp("slow");
-      $("#login").slideDown("slow");} 
-    else {
-	  $("#login").slideUp("slow");
-	  $("#fliptrip-join").hide();}
-  });
-
-  $("#back-to-login").click(function(){
-    if ($("#login").is(":hidden")) {
-      $("#fliptrip-join").slideUp("slow");
-      $("#forgot").slideUp("slow");
-      $("#login").slideDown("slow");} 
-    else {
-	  $("#login").slideUp("slow");
-	  $("#fliptrip-join").hide();}
-  });
-
-  $("#hide-login-button").click(function(){
-    $("#login").slideUp("slow");
-  });
-
-  $("#hide-join-button").click(function(){
-    $("#fliptrip-join").slideUp("slow");
-  });
-
-  $("#hide-forgot-password").click(function(){
-	$("#forgot").slideUp("slow");
-  });
-
-  $("#join-button").click(function(){
-	if ($("#fliptrip-join").is(":hidden")) {
-	  
-	  $("#login").slideUp("slow");
-	  $("#forgot").slideUp("slow");
-	  $("#fliptrip-join").slideDown("slow");}
-	else {
-	  $("#login").hide();
-	  $("#fliptrip-join").slideUp("slow");}
-  });
-
-
- 
-
-  $("#forgot-button").click(function(){
-	if ($("#forgot").is(":hidden")) {
-	  $("#login").slideUp("slow");
-	  $("#fliptrip-join").slideUp("slow");
-	  $("#forgot").slideDown("slow");}
-	else {
-	  $("#login").hide();
-	  $("#fliptrip-join").hide();
-	  $("#forgot").slideUp("slow");}
-	});
-</script>
-</body>
-</html>
-=======
-      	<%= yield %>
-      </div>
-    </div>
-
-  <script type="text/javascript">
+    <script type="text/javascript">
     $("#login-button").click(function(){
       if ($("#login").is(":hidden")) {
         $("#register").slideUp("slow");
         $("#forgot").slideUp("slow");
         $("#login").slideDown("slow");} 
       else {
-  	  $("#login").slideUp("slow");
-  	  $("#register").hide();}
+      $("#login").slideUp("slow");
+      $("#register").hide();}
     });
 
     $("#back-to-login").click(function(){
@@ -144,8 +79,8 @@
         $("#forgot").slideUp("slow");
         $("#login").slideDown("slow");} 
       else {
-  	  $("#login").slideUp("slow");
-  	  $("#register").hide();}
+      $("#login").slideUp("slow");
+      $("#register").hide();}
     });
 
     $("#hide-login-button").click(function(){
@@ -157,31 +92,32 @@
     });
 
     $("#hide-forgot-password").click(function(){
-  	$("#forgot").slideUp("slow");
+    $("#forgot").slideUp("slow");
     });
 
     $("#join-button").click(function(){
-  	if ($("#register").is(":hidden")) {
-  	  
-  	  $("#login").slideUp("slow");
-  	  $("#forgot").slideUp("slow");
-  	  $("#register").slideDown("slow");}
-  	else {
-  	  $("#login").hide();
-  	  $("#register").slideUp("slow");}
+    if ($("#register").is(":hidden")) {
+      
+      $("#login").slideUp("slow");
+      $("#forgot").slideUp("slow");
+      $("#register").slideDown("slow");}
+    else {
+      $("#login").hide();
+      $("#register").slideUp("slow");}
     });
     
     $("#forgot-button").click(function(){
-  	if ($("#forgot").is(":hidden")) {
-  	  $("#login").slideUp("slow");
-  	  $("#register").slideUp("slow");
-  	  $("#forgot").slideDown("slow");}
-  	else {
-  	  $("#login").hide();
-  	  $("#register").hide();
-  	  $("#forgot").slideUp("slow");}
-  	});
+    if ($("#forgot").is(":hidden")) {
+      $("#login").slideUp("slow");
+      $("#register").slideUp("slow");
+      $("#forgot").slideDown("slow");}
+    else {
+      $("#login").hide();
+      $("#register").hide();
+      $("#forgot").slideUp("slow");}
+    });
   </script>
+
   </body>
 </html>
->>>>>>> redesigns sign in, register and forgot password
+
