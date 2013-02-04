@@ -17,9 +17,9 @@
   </div>
   <div class="field">
     <%= f.label :security_code %><br />
-    <%= f.text_field :security_code, value: (('A'..'Z').to_a + (0..9).to_a).shuffle[0..9].join %>
+    <%= f.hidden_field :security_code, value: (('A'..'Z').to_a + (0..9).to_a).shuffle[0..9].join %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
