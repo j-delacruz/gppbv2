@@ -6,11 +6,10 @@
 /* Sign In, Register and Forgot Password */
 
 .slide{
-	background:url('../assets/subtle_dots.png');
+	background:url('../assets/debut_dark.png');
 	background-attachment: fixed;
 	width:100%;
 	height:100%;
-	overflow: hidden;
 }
 
 #login{
@@ -18,6 +17,10 @@
 	height: auto;
 	width:auto;
 	overflow: hidden;
+	
+	h3{
+		font-weight:normal; 
+	}
 	.login-form{
 		width:339px;
 		height:299px;
@@ -40,14 +43,17 @@
 	display:none;
 	height: auto;
 	width:auto;
-	overflow: hidden;
+	
+	h4{
+		font-weight:normal; 
+	}
+	
 	.forgot-form{
 		width:339px;
 		height:275px;
 		position: relative;
 		left:13%;
 		margin-top: 7%;
-		overflow: hidden;
 
 		.email-forgot{
 			width:250px;
@@ -61,17 +67,19 @@
 #register{
 	display:none;
 	height: auto;
-	width:auto;
-	overflow: hidden; 
+	width:100%;
+	
+	h3{
+		font-weight:normal; 
+	}
 	.register-form{
-		width:339px;
-		height:299px;
+		width:800px;
+		height:auto;
 		position: relative;
 		left:13%;
 		top:7%;
-		overflow: hidden;
 
-		.register_email, .register_pass, .register_conf_pass{
+		.register_email,.register_first_name, .register_last_name,.register_pass, .register_conf_pass, .uname{
 			width:250px;
 			height:20px;
 			font-size:13px;
@@ -89,10 +97,9 @@
 /**
 #postit{
 	background: url('../assets/postit2.png');
-	width: 339px;
 	height:auto;
 	position: relative;
-	overflow: hidden;
+
 }
 **/
 
@@ -100,7 +107,7 @@
 position: absolute;
 width: 35px;
 height: 35px;
-margin-top: -1px;
+margin-top: 2%;
 font-size: 15px;
 font-weight: 700;
 line-height: 30px;
@@ -133,5 +140,5 @@ text-decoration:none;
 
 
 #slide-container{
-	height:100%;
+	color:#fff;
 }

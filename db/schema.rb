@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130204040318) do
+=======
+ActiveRecord::Schema.define(:version => 20130204021750) do
+>>>>>>> redesigns slide
 
   create_table "agencies", :force => true do |t|
     t.string   "name"
@@ -43,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20130204040318) do
     t.datetime "updated_at",                                :null => false
     t.boolean  "admin",                  :default => false
     t.integer  "agency_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

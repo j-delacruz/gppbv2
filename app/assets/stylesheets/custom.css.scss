@@ -14,8 +14,6 @@ $textColor:						  #000000 ;
 .navbar{
 	width:100%;
 	height:100%;
-	overflow:hidden;
-	overflow-y:hidden;
 	position:static;
 }
 
@@ -24,4 +22,9 @@ $textColor:						  #000000 ;
 .alert{
 	margin-left:1%;
 	margin-top:-1.8%;
+}
+
+#user_remember_me{
+	float:none;
+	margin-top:-1.1%;
 }

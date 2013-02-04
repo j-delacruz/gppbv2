@@ -6,7 +6,7 @@
       <br class="clearfix"/>
       <%= f.password_field :password, :required => false, :placeholder=>"Password", :class=>"login_pass" %>
       <br class="clearfix"/>
-      <%= f.check_box :remember_me, :as => :boolean if devise_mapping.rememberable? %>Remember Me
+      <%= f.check_box :remember_me, :class=>"check-box", :as => :boolean if devise_mapping.rememberable?%> Remember Me
       <br class="clearfix"/>
       <br class="clearfix"/>
       <%= f.submit "Sign in", :class=>"btn btn-primary" %>
