@@ -4,9 +4,15 @@
 
 jQuery ->
         $('#agency-users').dataTable()
+		bJQueryUI: true
+		sPaginationType: "full_numbers"
+
 
 jQuery ->
 		$('#all-ppmps').dataTable()
+		"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+		"sPaginationType": "bootstrap"
+		bJQueryUI: true
 
 	
 	

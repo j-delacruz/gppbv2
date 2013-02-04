@@ -1,39 +1,22 @@
 
 <p id="notice"><%= notice %></p>
 
-<table summary="Agency Info" width="100%" class="table table-bordered">
-<thead>
-<tr>
-<th style="text-align:center"><h4><%= @agency.name %></h4></th>
 
-</tr>
-<tr>
-	<th>Security Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
- <h6><%= @agency.security_code %></h6>
-</td>
-</tr>
-</tbody>
-<br class="clearfix">
-<tfoot>
-<tr>
-	<td>
-<div class="pull-right">
+<h4><%= @agency.name %></h4>
+
+
+ Security Code:<h6><%= @agency.security_code %></h6>
+
+<div>
 	<%= link_to 'Edit', edit_agency_path(@agency),:class=>"btn btn-primary" %>
 	<%= link_to 'Back', agencies_path, :class=>"btn btn-primary" %>
 	
 </div>
-</td>
-</tr>
-</tfoot>
-</table>
+
 <br class="clearfix">
 <br class="clearfix">
 
+<!-- ALL Agency Users -->
 
 <table width="100%"class="table table-bordered" id="agency-users">
 	<tfoot>
@@ -67,11 +50,14 @@
 </tbody>
 </table>
 
+
 <br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+<br class="clearfix">
+<!-- ALL PPMP -->
 
-<!-- ALL PPPM -->
-
-<table width="100%" id="all-ppmps">
+<table width="100%" id="all-ppmps" class="table table-bordered">
 	<thead>
 	<tr>
 		<th style="text-align:center;">
