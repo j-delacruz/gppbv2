@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   has_many :project_procurement_management_plans
   belongs_to :agency
  # validates :username, :uniqueness=> true
+
+ def fullname
+   "#{first_name} #{last_name}"
+ end
 end

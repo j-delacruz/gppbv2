@@ -1,20 +1,25 @@
 <br class="clearfix">
 
 <table class="table table-bordered table-striped table-hover" id="all-users">
-<thead>
-<tr>
-	<th><h6>Email</h6></th>
-
-</tr>
-</thead>
-
-<tbody>
-	<% @users.each do |user| %>
-	<tr>
-		<td>
-	<%= link_to user.email, [:admin, user] %>
-		</td>
-	</tr>
-	<% end %>
+	<thead>
+		<tr>
+			<th>Fullname</th>
+			<th>Email</th>
+			<th>Agency</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.fullname %></td>
+			<td><%= link_to user.email, [:admin, user] %></td>
+			<td></td>
+			<td>
+				<%= link_to "Edit", '#' %>
+				<%= link_to "Delete", '#' %>
+			</td>
+		</tr>
+		<% end %>
 </tbody>
 </table>
