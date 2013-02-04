@@ -12,10 +12,16 @@ user1 = User.create!(email: 'admin@example.com', password: 'password', admin: tr
 puts user1.email
 
 
-agency1 = Agency.create!(name: 'Agency sampleOne', security_code: 'SAMPLE0001')
-agency2 = Agency.create!(name: 'Agency sampleTwo', security_code: 'SAMPLE0002')
-agency3 = Agency.create!(name: 'Agency sampleThree', security_code: 'SAMPLE0003')
-agency4 = Agency.create!(name: 'Agency sampleFour', security_code: 'SAMPLE0004')
+agency1 = Agency.create!(name: 'James Agency', security_code: 'SAMPLE0001')
+agency2 = Agency.create!(name: 'Shiela Agency', security_code: 'SAMPLE0002')
+agency3 = Agency.create!(name: 'Vieve Agency', security_code: 'SAMPLE0003')
 
-user2 = User.create!(email: 'agency@example.com', password: 'password', agency_id: 2)
+
+user2 = User.create!(email: 'james@example.com', password: 'password', agency_id: 1)
 puts user2.email
+
+user3 = User.create!(email: 'shiela@example.com', password: 'password', agency_id: 2)
+puts user3.email
+
+user4 = User.create!(email: 'vieve@example.com', password: 'password', agency_id: 3)
+puts user4.email

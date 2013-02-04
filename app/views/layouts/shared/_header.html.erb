@@ -11,7 +11,7 @@
 	  <% if user_signed_in? %>
       <% if current_user.admin? %>
       <% else %>
-        <li><%= link_to "PPMP's", '#' %></li>
+        <li><%= link_to "PPMP's", project_procurement_management_plans_url %></li>
       <% end %>
       <%= admins_only do %>
         <li><%= link_to "Admin", admin_root_url %></li>

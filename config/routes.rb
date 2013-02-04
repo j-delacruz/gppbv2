@@ -1,6 +1,9 @@
 Gppbv2::Application.routes.draw do
 
 
+  resources :project_procurement_management_plans
+
+
   devise_for :users
 
   resources :agencies do

@@ -1,0 +1,28 @@
+<h1>Listing project_procurement_management_plans</h1>
+<%= link_to 'New Project procurement management plan', new_project_procurement_management_plan_path %>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>User</th>
+    <th>Agency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% current_user.agency.project_procurement_management_plans.each do |ppmp| %>
+  <tr>
+    <td><%= ppmp.name %></td>
+    <td><%= ppmp.user.email %></td>
+    <td><%= ppmp.agency.name %></td>
+    <td><%= link_to 'Show', ppmp %></td>
+    <td><%= link_to 'Edit', [:edit, ppmp] %></td>
+    <td><%= link_to 'Destroy', ppmp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+

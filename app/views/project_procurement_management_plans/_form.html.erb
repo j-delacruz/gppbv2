@@ -1,0 +1,25 @@
+<%= form_for(@project_procurement_management_plan) do |f| %>
+  <% if @project_procurement_management_plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project_procurement_management_plan.errors.count, "error") %> prohibited this project_procurement_management_plan from being saved:</h2>
+
+      <ul>
+      <% @project_procurement_management_plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :agency_id, value: current_user.agency.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

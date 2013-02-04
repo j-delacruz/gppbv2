@@ -14,9 +14,16 @@
 
 <br>
 <%= link_to "Add User", new_agency_user_url(@agency) %>
-
+<h5>list of all Users</h5>
 <ul>
 	<% @agency.users.each do |user| %>
 	<li><%= user.email %></li>
+	<% end %>
+</ul>
+
+<h5>list of all PPMP's</h5>
+<ul>
+	<% @agency.project_procurement_management_plans.each do |ppmp| %>
+	<li><%= ppmp.name %></li>
 	<% end %>
 </ul>

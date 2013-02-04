@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @project_procurement_management_plan.name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @project_procurement_management_plan.user.email %>
+</p>
+
+<p>
+  <b>Agency:</b>
+  <%= @project_procurement_management_plan.agency.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_procurement_management_plan_path(@project_procurement_management_plan) %> |
+<%= link_to 'Back', project_procurement_management_plans_path %>
