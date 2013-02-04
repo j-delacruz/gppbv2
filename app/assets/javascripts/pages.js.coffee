@@ -3,8 +3,11 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-        $('#agency-info').dataTable
-          sPaginationType: "full_numbers"
+        $('#agency-users').dataTable()
+
+jQuery ->
+		$('#all-ppmps').dataTable()
+
 	
 	
 ###################################################################################
