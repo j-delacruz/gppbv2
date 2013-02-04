@@ -1,0 +1,24 @@
+<!-- ALL Agency Users -->
+<table class="table table-bordered table-striped table-hover table-condensed" id="agency-users">
+	<thead>
+		<tr>
+			<th>Fullname</th>
+			<th>Email</th>
+			<th>Position</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @agency.users.each do |user| %>
+		<tr>
+			<td></td>
+			<td><%= user.email %></td>
+			<td></td>
+			<td>
+				<%= link_to "Edit", '#' %> 
+				<%= link_to "Delete", '#' %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

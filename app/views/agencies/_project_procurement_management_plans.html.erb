@@ -1,0 +1,20 @@
+<!-- ALL PPMP -->
+<table class="table table-bordered table-striped table-hover" id="all-ppmps">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @agency.project_procurement_management_plans.each do |ppmp| %>
+		<tr>
+			<td><%= link_to ppmp.name, '#' %></td>
+			<td>
+				<%= link_to "Edit", '#' %> 
+				<%= link_to "Delete", '#' %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

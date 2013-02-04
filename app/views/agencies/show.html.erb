@@ -1,88 +1,14 @@
-
 <p id="notice"><%= notice %></p>
-
-
 <h4><%= @agency.name %></h4>
-
-
- Security Code:<h6><%= @agency.security_code %></h6>
-
+Security Code:<h6><%= @agency.security_code %></h6>
 <div>
+	<%= link_to "ADD User", new_agency_user_url(@agency), :class => 'btn btn-primary' %>
 	<%= link_to 'Edit', edit_agency_path(@agency),:class=>"btn btn-primary" %>
 	<%= link_to 'Back', agencies_path, :class=>"btn btn-primary" %>
-	
 </div>
-
+<%= render 'users' %>
 <br class="clearfix">
-<br class="clearfix">
-
-<!-- ALL Agency Users -->
-
-<table width="100%"class="table table-bordered" id="agency-users">
-	<tfoot>
-<tr>
-	<td>
-		<div class="pull-right">
-<%= link_to "Add User", new_agency_user_url(@agency), :class=>"btn btn-primary" %>
-</div>
-</td>
-</tr>
-</tfoot>
-
-<thead>
-<tr>
-	<th style="text-align:center;"><h4>List of all users</h4></th>
-	
-</tr>
-
-</thead>
-
-<tbody>
-	<% @agency.users.each do |user| %>
-<tr>
-	<td>
-		
-		<h6><%= user.email %></h6>
-		
-	</td>
-</tr>
-<% end %>
-</tbody>
-</table>
-
-
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
-<br class="clearfix">
-<!-- ALL PPMP -->
-
-<table width="100%" id="all-ppmps" class="table table-bordered">
-	<thead>
-	<tr>
-		<th style="text-align:center;">
-		<h4>List of all PPMP's</h4>
-		</th>
-	</tr>
-	
-	<tr>
-		<th style="text-align:left;">Name</th>
-	</tr>
-	</thead>
-
-	<tbody>
-		<% @agency.project_procurement_management_plans.each do |ppmp| %>
-	<tr>
-		<td>
-		
-			<h6><%= ppmp.name %></h6>
-		
-		</td>
-	</tr>
-	<% end %>
-	</tbody>
-</table>
-
+<%= render 'project_procurement_management_plans' %>
 
 
 	
