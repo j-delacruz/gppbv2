@@ -18,6 +18,12 @@
 	<li><%= link_to "Login", new_user_session_url %></li>
 	<li><%= link_to "Register", new_user_registration_url %></li>
 	<% end %>
+	<%= admins_only do %>
+    <li><%= link_to "Admin", admin_root_url %></li>
+    <% end %>
+    <ul>
+    <li><%= link_to "Agency", agencies_url %></li>
+    </ul>
 </ul>
 	
 <%= yield %>
@@ -74,6 +80,7 @@
       <% else %>
 
       <% end %>
+
         <%= yield %>
       </div>
     </div>
