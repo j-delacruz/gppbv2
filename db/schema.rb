@@ -10,12 +10,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended to check this file into your version control system.
-
-<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130204040318) do
-=======
-ActiveRecord::Schema.define(:version => 20130204021750) do
->>>>>>> redesigns slide
 
   create_table "agencies", :force => true do |t|
     t.string   "name"

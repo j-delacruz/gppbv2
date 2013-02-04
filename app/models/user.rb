@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   has_many :project_procurement_management_plans
   belongs_to :agency
-  validates :username, :uniqueness=> true
+ # validates :username, :uniqueness=> true
 end
