@@ -5,7 +5,6 @@ development:
   username: postgres
   password: admin
   host: localhost
-  port: 5433
 
 test:
   adapter: postgresql
@@ -13,7 +12,6 @@ test:
   username: postgres
   password: admin
   host: localhost
-  port: 5433
 
 production:
   adapter: postgresql
