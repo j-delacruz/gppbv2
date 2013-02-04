@@ -10,9 +10,17 @@
  *
  *= require_self
  *= require_tree .
+
  */
 html,body{
 	padding-bottom: 15px;
 	width:100%;
 	height:100%;
 }
+
+#agency-info_filter{
+	float:right;
+}
+
+
+

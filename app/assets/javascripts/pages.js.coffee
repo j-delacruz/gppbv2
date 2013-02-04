@@ -2,7 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-
+jQuery ->
+        $('#agency-info').dataTable
+          sPaginationType: "full_numbers"
+	
+	
 ###################################################################################
 
 # Override Rails handling of confirmation
@@ -43,7 +47,3 @@ $.rails.allowAction = (element) ->
   $modal_html.modal()
   # Prevent the original link from working
   return false
-
-
-$(document).ready ->
-	$('.datepick').datepicker();

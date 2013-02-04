@@ -1,29 +1,78 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @agency.name %>
-</p>
-<p>
-  <b>Security code:</b>
-  <%= @agency.security_code %>
-</p>
+<table summary="Agency Info" width="100%" id="agency-info">
+<thead>
+<tr>
+<th style="text-align:center"><h4><%= @agency.name %></h4></th>
 
-<%= link_to 'Edit', edit_agency_path(@agency) %> |
-<%= link_to 'Back', agencies_path %>
+</tr>
+<tr>
+	<th>Security Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+ <h6><%= @agency.security_code %></h6>
+</td>
+</tr>
+</tbody>
+<br class="clearfix">
+<tfoot>
+<tr>
+	<td>
+<div class="pull-right">
+	<%= link_to 'Edit', edit_agency_path(@agency),:class=>"btn btn-primary" %>
+	<%= link_to 'Back', agencies_path, :class=>"btn btn-primary" %>
+	
+</div>
+</td>
+</tr>
+</tfoot>
+</table>
+<br class="clearfix">
+<br class="clearfix">
+<table summary="All Agency Users" width="100%">
+	<tfoot>
+<tr>
+	<td>
+		<div class="pull-right">
+<%= link_to "Add User", new_agency_user_url(@agency), :class=>"btn btn-primary" %>
+</div>
+</td>
+</tr>
+</tfoot>
+<tr>
+	<th colspan="15" style="text-align:center;"><h4>List of all users</h4></th>
+	
+</tr>
 
-<br>
-<%= link_to "Add User", new_agency_user_url(@agency) %>
-<h5>list of all Users</h5>
-<ul>
-	<% @agency.users.each do |user| %>
-	<li><%= user.email %></li>
-	<% end %>
-</ul>
+<tr class="odd">
+	<td>
+		<% @agency.users.each do |user| %>
+		<h6><%= user.email %></h6>
+		<% end %>
+	</td>
+</tr>
+</table>
 
-<h5>list of all PPMP's</h5>
-<ul>
+<br class="clearfix">
+
+<table summary="All PPMPs" width="100%">
+<tr>
+	<th colspan="15" style="text-align:center;">
+	<h4>List of all PPMP's</h4>
+	</th>
+</tr>
+
+<tr class="odd">
+	<td>
 	<% @agency.project_procurement_management_plans.each do |ppmp| %>
-	<li><%= ppmp.name %></li>
+		<h6><%= ppmp.name %></h6>
 	<% end %>
-</ul>
+	</td>
+</tr>
+
+</table>
+	
