@@ -7,17 +7,26 @@
         <span class="icon-bar"></span>
       </a>
       <a class="brand" href="#">OPPCIS</a>
+	<% if user_signed_in? %>
+        <%= admins_only do %>
+		<ul class="nav">
+          <li><%= link_to "Admin", admin_root_url %></li>
+        <% end %>
+            <li><%= link_to "Agency", agencies_url %></li>
+          </ul>
+      <% else %>
+
+      <% end %>
       <div class="nav-collapse collapse">
          <ul class="nav pull-right">
           <% if !user_signed_in?%>
-         <li><a href="javascript:{}" data-section="2" class="link-transit" id="join-button">Register</a></li>
-      <li><a href="javascript:{}" data-section="3" class="link-transit" id="login-button">Login</a></li>
+         <li><a href="javascript:{}" data-section="2" id="join-button">Register</a></li>
+      <li><a href="javascript:{}" data-section="3" id="login-button">Login</a></li>
         <% else %>
-      <li><%= current_user.email %></li>
+      <li><a href="#" style="cursor:crosshair;"><%= current_user.email %></a></li>
       <li><%= link_to "Logout", destroy_user_session_url, method: :delete,:confirm=>"Are you sure you want to log out?" %></li>
       <% end %>
         </ul>
-       
       </div><!--/.nav-collapse -->
     </div>
   </div>

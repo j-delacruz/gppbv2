@@ -69,18 +69,7 @@
       </section>
       <%= render 'layouts/shared/header' %>
       <%= render 'layouts/shared/alert' %>
-      <div class="container">
-      <% if user_signed_in? %>
-        <%= admins_only do %>
-          <li><%= link_to "Admin", admin_root_url %></li>
-        <% end %>
-          <ul>
-            <li><%= link_to "Agency", agencies_url %></li>
-          </ul>
-      <% else %>
-
-      <% end %>
-
+      <div class="container-fluid" id="body">
         <%= yield %>
       </div>
     </div>
