@@ -1,7 +1,14 @@
 /*DataTables*/
 
 $(document).ready( function() {
-	$('#all-users').dataTable( {
+	$('#all-active-users').dataTable( {
+		"bJQueryUI": true,
+		"sPaginationType": "full_numbers"
+	} );
+} );
+
+$(document).ready( function() {
+	$('#all-deactivated-users').dataTable( {
 		"bJQueryUI": true,
 		"sPaginationType": "full_numbers"
 	} );
@@ -31,6 +38,14 @@ $(document).ready( function() {
 
 $(document).ready( function() {
 	$('#ppmp-form').dataTable( {
+		"bJQueryUI": true,
+		"sPaginationType": "full_numbers"
+	} );
+} );
+
+
+$(document).ready( function() {
+	$('#all-agencies').dataTable( {
 		"bJQueryUI": true,
 		"sPaginationType": "full_numbers"
 	} );

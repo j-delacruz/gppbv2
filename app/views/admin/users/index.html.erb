@@ -1,29 +1,81 @@
 <br class="clearfix">
 <center><h4>List of all Users</h4></center>
-<table class="table table-bordered table-striped table-hover" id="all-users">
-	<thead>
-		<tr>
-			<th>Fullname</th>
-			<th>Email</th>
-			<th>Username</th>
-			<th>Agency</th>
-			<th>Action</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @users.each do |user| %>
-		<tr>
-			<td><%= user.fullname %></td>
-			<td><%= link_to user.email, [:admin, user] %></td>
-			<td><%= user.username %></td>
-			<td><%= user.agency %></td>
-			<td>
-				<%= link_to raw('<i class="icon-edit"></i>'), '#' %>
-				<%= link_to raw('<i class="icon-trash"></i>'), '#' %>
-			</td>
-		</tr>
-		<% end %>
-</tbody>
-</table
+
 
 <!--html to ruby  use raw | ruby to html use #{}-->
+
+
+
+
+<div class="tabbable">
+	    <ul id="myTab" class="nav nav-tabs">
+		  <li class="active"><a href="#activated" data-toggle="tab">Active</a></li>
+		  <li><a href="#deactivated" data-toggle="tab">Deactivated</a></li>
+	
+		  
+	    </ul>
+	    <div class="tab-content">
+			<div class="tab-pane fade in active" id="activated">
+				<table class="table table-bordered table-striped table-hover" id="all-active-users">
+					<thead>
+						<tr>
+							<th>Fullname</th>
+							<th>Email</th>
+							<th>Username</th>
+							<th>Agency</th>
+							<th>Action</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @users.each do |user| %>
+						<tr>
+							<td><%= user.fullname %></td>
+							<td><%= link_to user.email, [:admin, user] %></td>
+							<td><%= user.username %></td>
+							<td><%= user.agency %></td>
+							<td>
+								<%= link_to raw('<i class="icon-edit"></i>'), '#' %>
+								<%= link_to raw('<i class="icon-trash"></i>'), '#' %>
+							</td>
+							<td>
+								<%= link_to "Deactivate", "#", :class=>"btn btn-danger"%>
+						</tr>
+						<% end %>
+				</tbody>
+				</table>
+			</div>
+			<div class="tab-pane fade in" id="deactivated">
+				<table class="table table-bordered table-striped table-hover" id="all-deactivated-users">
+					<thead>
+						<tr>
+							<th>Fullname</th>
+							<th>Email</th>
+							<th>Username</th>
+							<th>Agency</th>
+							<th>Action</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @users.each do |user| %>
+						<tr>
+							<td><%= user.fullname %></td>
+							<td><%= link_to user.email, [:admin, user] %></td>
+							<td><%= user.username %></td>
+							<td><%= user.agency %></td>
+							<td>
+								<%= link_to raw('<i class="icon-edit"></i>'), '#' %>
+								<%= link_to raw('<i class="icon-trash"></i>'), '#' %>
+							</td>
+							<td>
+								<%= link_to "Activate", "#", :class=>"btn btn-primary"%>
+						</tr>
+						<% end %>
+				</tbody>
+				</table>
+			</div>
+		
+
+	    </div>
+	</div>
