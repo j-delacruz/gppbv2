@@ -1,6 +1,9 @@
 <div id="postit">
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html=>{:class=>"register-form"}) do |f| %>
   <h3>Register</h3>
+	<strong>If you don't have a security code, contact <a href="#">GPPB</a>.</strong>
+	<br class="clearfix">
+	<br class="clearfix">
     <div class="form-inputs">
 		<div class="row">
 		<div class="span5">
@@ -31,6 +34,10 @@
 			
 			<p>
 				<%= f.text_field :last_name, :class=>"register_last_name", :placeholder=>"Last Name"%>
+			</p>
+			
+			<p>
+				<input type="text" class="register_last_name" placeholder="Security Code">
 			</p>
 			<%= f.submit "Sign up", :class=>"btn btn-primary" %>
 		</div>

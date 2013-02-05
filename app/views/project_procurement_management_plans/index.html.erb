@@ -1,25 +1,31 @@
-<h1>Listing project_procurement_management_plans</h1>
-<%= link_to 'New Project procurement management plan', new_project_procurement_management_plan_path %>
-<table class="table table-bordered">
+<center><h4>List of Project Procurement Management Plans</h4></center>
+<%= link_to 'New Project Procurement Management Plan', new_project_procurement_management_plan_path, :class=>"btn btn-primary pull-right" %>
+<br class="clearfix">
+<br class="clearfix">
+<table class="table table-bordered table-striped table-hover" id="all-ppmps-by-agency">
+	<thead>
   <tr>
     <th>Name</th>
     <th>User</th>
     <th>Agency</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <th><center>Actions</center></th>
 
+  </tr>
+</thead>
+
+<tbody>
 <% current_user.agency.project_procurement_management_plans.each do |ppmp| %>
   <tr>
     <td><%= ppmp.name %></td>
     <td><%= ppmp.user.email %></td>
     <td><%= ppmp.agency.name %></td>
-    <td> <center> <%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %></center></td>
-    <td><center><%= link_to  raw('<i class="icon-edit"></i>'), [:edit, ppmp] %></center></td>
-    <td><center><%= link_to  raw('<i class="icon-trash"></i>'), ppmp, method: :delete, data: { confirm: 'Are you sure?' } %></center></td>
+    <td><%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %>
+   <%= link_to  raw('<i class="icon-edit"></i>'), [:edit, ppmp] %>
+    <%= link_to  raw('<i class="icon-trash"></i>'), ppmp, method: :delete, data: { confirm: 'Are you sure?' } %>
   </tr>
 <% end %>
+
+</tbody>
 </table>
 
 <br />
