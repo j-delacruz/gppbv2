@@ -16,10 +16,12 @@
 			<td><%= link_to user.email, [:admin, user] %></td>
 			<td><%= user.agency %></td>
 			<td>
-				<%= link_to "Edit", '#' %>
+				<%= link_to raw('<i class="icon-edit"></i>'), '#' %>
 				<%= link_to "Delete", '#' %>
 			</td>
 		</tr>
 		<% end %>
 </tbody>
-</table>
+</table
+
+<!--html to ruby  use raw | ruby to html use #{}-->
