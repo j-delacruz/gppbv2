@@ -1,40 +1,79 @@
+<br class="clearfix">
 <center><h4>List of Project Procurement Management Plans</h4></center>
 <%= link_to 'New Project Procurement Management Plan', new_project_procurement_management_plan_path, :class=>"btn btn-primary pull-right" %>
 <br class="clearfix">
 <br class="clearfix">
-<table class="table table-bordered table-striped table-hover" id="all-ppmps-by-agency">
-	<thead>
-  <tr>
-    <th>Name</th>
-	<th>Version No.</th>
-	<th>Year</th>
-	<th>General Description</th>
-    <th>User</th>
-    <th>Agency</th>
-    <th><center>Actions</center></th>
 
-  </tr>
-</thead>
 
-<tbody>
-<% current_user.agency.project_procurement_management_plans.each do |ppmp| %>
-  <tr>
-    <td><%= ppmp.name %></td>
-	<td><%= ppmp.version_num%></td>
-	<td><%= ppmp.year%></td>
-	<td><%=ppmp.description%></td>
-    <td><%= ppmp.user.email %></td>
-    <td><%= ppmp.agency.name %></td>
-    <td><%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %>
-   <%= link_to  raw('<i class="icon-edit"></i>'), [:edit, ppmp] %>
-    <%= link_to  raw('<i class="icon-trash"></i>'), ppmp, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </tr>
-<% end %>
+<!--html to ruby  use raw | ruby to html use #{}-->
 
-</tbody>
-</table>
 
-<br />
+
+
+<div class="tabbable">
+	    <ul id="myTab" class="nav nav-tabs">
+		  <li class="active"><a href="#ppmp-list" data-toggle="tab">Project Procurement Management Plans</a></li>
+		  <li><a href="#attachments" data-toggle="tab">Attachments</a></li>
+	
+		  
+	    </ul>
+	    <div class="tab-content">
+			<div class="tab-pane fade in active" id="ppmp-list">
+				<table class="table table-bordered table-striped table-hover" id="all-ppmps-by-agency">
+					<thead>
+				  <tr>
+				    <th>Name</th>
+					<th>Version No.</th>
+					<th>Year</th>
+					<th>General Description</th>
+				    <th>User</th>
+				    <th>Agency</th>
+				    <th><center>Actions</center></th>
+
+				  </tr>
+				</thead>
+
+				<tbody>
+				<% current_user.agency.project_procurement_management_plans.each do |ppmp| %>
+				  <tr>
+				    <td><%= ppmp.name %></td>
+					<td><%= ppmp.version_num%></td>
+					<td><%= ppmp.year%></td>
+					<td><%=ppmp.description%></td>
+				    <td><%= ppmp.user.email %></td>
+				    <td><%= ppmp.agency.name %></td>
+				    <td><%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %>
+				   <%= link_to  raw('<i class="icon-edit"></i>'), [:edit, ppmp] %>
+				    <%= link_to  raw('<i class="icon-trash"></i>'), ppmp, method: :delete, data: { confirm: 'Are you sure?' } %>
+				  </tr>
+				<% end %>
+
+				</tbody>
+				</table>
+			</div>
+			<div class="tab-pane fade in" id="attachments">
+				Uploaded Files
+			</div>
+		
+
+	    </div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
