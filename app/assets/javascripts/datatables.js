@@ -21,3 +21,10 @@ $(document).ready( function() {
 		"sPaginationType": "full_numbers"
 	} );
 } );
+
+$(document).ready( function() {
+	$('#all-ppmps-by-agency').dataTable( {
+		"bJQueryUI": true,
+		"sPaginationType": "full_numbers"
+	} );
+} );
