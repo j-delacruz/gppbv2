@@ -12,11 +12,11 @@
 	<tbody>
 		<% @users.each do |user| %>
 		<tr>
-			<td><%= user.fullname %></td>
-			<td><%= link_to user.email, [:admin, user] %></td>
-			<td><%= user.agency %></td>
+			<td><%= link_to user.fullname, [:admin, user] %></td>
+			<td><%= user.email %></td>
+			<td><%= user.agency.name %></td>
 			<td>
-				<%= link_to "Edit", '#' %>
+				<%= link_to "Edit", [:edit, :admin, user] %>
 				<%= link_to "Delete", '#' %>
 			</td>
 		</tr>

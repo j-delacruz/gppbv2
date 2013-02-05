@@ -22,7 +22,7 @@
 		
 		<div class="span5">
 			<p>
-				<%= f.select :agency_id, Agency.all.map{ |a| [a.name, a.id] }, :prompt=>"Agency" %>
+				<%= f.select :agency_id, Agency.all.map{ |a| [a.name, a.id] }, :prompt=>"- Select Agency -" %>
 			</p>
 		
 			<p>

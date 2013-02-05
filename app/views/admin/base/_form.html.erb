@@ -1,0 +1,27 @@
+<%= form_for [:admin, @user] do |f| %>
+	<p>
+		<%= f.label :agency_id %>
+		<%= f.select :agency_id, Agency.all.map{ |a| [a.name, a.id] } %>
+	</p>
+	<p>
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name %>
+	</p>
+	<p>
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name %>
+	</p>
+	<p>
+		<%= f.label :username %>
+		<%= f.text_field :username %>
+	</p>
+	<p>
+		<%= f.label :email %>
+		<%= f.email_field :email %>
+	</p>
+	<p>
+		<%= f.label :password %>
+		<%= f.password_field :email %>
+	</p>
+	<%= f.submit "Submit" %>
+<% end %>
