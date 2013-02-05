@@ -15,9 +15,9 @@
     <td><%= ppmp.name %></td>
     <td><%= ppmp.user.email %></td>
     <td><%= ppmp.agency.name %></td>
-    <td><%= link_to 'Show', ppmp %></td>
-    <td><%= link_to 'Edit', [:edit, ppmp] %></td>
-    <td><%= link_to 'Destroy', ppmp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td> <center> <%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %></center></td>
+    <td><center><%= link_to  raw('<i class="icon-edit"></i>'), [:edit, ppmp] %></center></td>
+    <td><center><%= link_to  raw('<i class="icon-trash"></i>'), ppmp, method: :delete, data: { confirm: 'Are you sure?' } %></center></td>
   </tr>
 <% end %>
 </table>
