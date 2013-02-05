@@ -28,3 +28,21 @@ $textColor:						  #000000 ;
 	float:none;
 	margin-top:-0.2%;
 }
+
+/* Table */
+
+.table{
+	font-size:8pt;
+}
+
+.table-ppmp{
+	font-size:6pt;
+}
+
+
+/* Rotate Text */
+#rotate{
+-webkit-transform: rotate(-90deg); 
+-moz-transform: rotate(-90deg);
+
+}
