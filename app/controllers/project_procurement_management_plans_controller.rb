@@ -27,7 +27,6 @@ class ProjectProcurementManagementPlansController < ApplicationController
   def new
     @project_procurement_management_plan = current_user.project_procurement_management_plans.build
     1.times { @project_procurement_management_plan.projects.build }
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @project_procurement_management_plan }

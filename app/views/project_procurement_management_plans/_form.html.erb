@@ -13,7 +13,13 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :value=>"PPMP",:readonly => true %>
+	<%= f.label "Version Number" %>
+	<%= f.text_field :version_num%>
+	<%= f.label :year%>
+	<%= f.select :year, 2012..2030 %>
+	<%= f.label :description %>
+	<%= f.text_area :description, :rows=>5%>
   </div>
   <%= f.fields_for :projects do |builder| %>
   <%= render 'projects_fields', :f => builder %>

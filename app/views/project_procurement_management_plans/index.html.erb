@@ -6,6 +6,9 @@
 	<thead>
   <tr>
     <th>Name</th>
+	<th>Version No.</th>
+	<th>Year</th>
+	<th>Description</th>
     <th>User</th>
     <th>Agency</th>
     <th><center>Actions</center></th>
@@ -17,6 +20,9 @@
 <% current_user.agency.project_procurement_management_plans.each do |ppmp| %>
   <tr>
     <td><%= ppmp.name %></td>
+	<td><%= ppmp.version_num%></td>
+	<td><%= ppmp.year%></td>
+	<td><%=ppmp.description%></td>
     <td><%= ppmp.user.email %></td>
     <td><%= ppmp.agency.name %></td>
     <td><%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %>
