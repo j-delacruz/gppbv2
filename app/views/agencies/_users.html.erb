@@ -11,12 +11,12 @@
 	<tbody>
 		<% @agency.users.each do |user| %>
 		<tr>
-			<td></td>
+			<td><%= user.fullname %></td>
 			<td><%= user.email %></td>
 			<td></td>
 			<td>
 				<%= link_to "Edit", '#' %> 
-				<%= link_to "Delete", '#' %>
+				<%= link_to "Delete", [@agency, user], method: :delete %>
 			</td>
 		</tr>
 		<% end %>
