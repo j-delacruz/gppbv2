@@ -4,7 +4,7 @@ Security Code:<h6><%= @agency.security_code %></h6>
 <div>
 	<%= link_to "Add User", new_agency_user_url(@agency), :class => 'btn btn-primary' %>
 	<%= link_to 'Edit', edit_agency_path(@agency),:class=>"btn btn-primary" %>
-	<%= link_to 'Back', agencies_path, :class=>"btn btn-primary" %>
+	<%= link_to 'Back', agencies_path, :class=>"btn" %>
 </div>
 <br class="clearfix">
 <%= render 'users' %>
