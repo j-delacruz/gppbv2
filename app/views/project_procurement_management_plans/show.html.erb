@@ -5,22 +5,35 @@
 </p>
 
 <p>
+	<b>Period Covered:</b>
+	<%= @project_procurement_management_plan.ppmp_period_covered_start.try(:strftime,'%b %m,%y') %> to 	
+	<%= @project_procurement_management_plan.ppmp_period_covered_end.try(:strftime,'%b %m,%y') %>
+</p>
+
+<p>
 	<b>General Description:</b>
 	<%= @project_procurement_management_plan.description %>
 </p>
 
 <p>
-  <b>User:</b>
+  <b>Submitted By:</b>
   <%= @project_procurement_management_plan.user.email %>
 </p>
 
 <p>
-  <b>Agency:</b>
+  <b>Name of Agency:</b>
   <%= @project_procurement_management_plan.agency.name %>
 </p>
 
+
 <%= render 'projects' %>
 
-
-<%= link_to 'Edit', edit_project_procurement_management_plan_path(@project_procurement_management_plan), :class=>"btn btn-primary" %>
-<%= link_to 'Back', project_procurement_management_plans_path, :class=>"btn"%>
+<a href="#" onclick="window.print();return false;" class="btn btn-primary">Print</a>
+<a href="#" onclick="alert('Export me!')" class="btn btn-primary">Export to PDF</a> 
+<a href="#" onclick="alert('Export me!')" class="btn btn-primary">Export to Excel</a> 
+<a href="#" onclick="alert('Attach me!')" class="btn btn-primary">Attach File</a> 
+<%= link_to 'Edit', edit_project_procurement_management_plan_path(@project_procurement_management_plan), :class=>"btn btn-primary pull-right" %>
+<br>
+<br>
+<br>
+<%= link_to 'Back', project_procurement_management_plans_path, :class=>"btn btn-mini"%>
