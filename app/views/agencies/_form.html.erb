@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :security_code %><br />
+    <!--<%= f.label :security_code %><br />-->
     <%= f.hidden_field :security_code, value: (('A'..'Z').to_a + (0..9).to_a).shuffle[0..9].join %>
   </div>
   <div class="actions">

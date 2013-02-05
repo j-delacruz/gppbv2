@@ -28,3 +28,10 @@ $(document).ready( function() {
 		"sPaginationType": "full_numbers"
 	} );
 } );
+
+$(document).ready( function() {
+	$('#ppmp-form').dataTable( {
+		"bJQueryUI": true,
+		"sPaginationType": "full_numbers"
+	} );
+} );
