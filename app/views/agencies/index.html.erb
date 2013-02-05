@@ -14,12 +14,10 @@
 	
 	<% @agencies.each do |agency| %>
 	  <tr>
-	    <td><%= agency.name %></td>
+	    <td><%= link_to agency.name, agency %></td>
 	    <td><%= agency.security_code %></td>
 	    <td><%= agency.users.count %></td>
 	    <td>
-	    	<%= link_to 'Show', agency %>
-	    	<%= link_to 'Edit', edit_agency_path(agency) %>
 	    	<%= link_to 'Destroy', agency, method: :delete, data: { confirm: 'Are you sure?' } %>
 	    </td>
 	  </tr>
