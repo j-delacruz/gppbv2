@@ -5,6 +5,7 @@
 		<tr>
 			<th>Fullname</th>
 			<th>Email</th>
+			<th>Username</th>
 			<th>Agency</th>
 			<th>Action</th>
 		</tr>
@@ -14,6 +15,7 @@
 		<tr>
 			<td><%= user.fullname %></td>
 			<td><%= link_to user.email, [:admin, user] %></td>
+			<td><%= user.username %></td>
 			<td><%= user.agency %></td>
 			<td>
 				<%= link_to raw('<i class="icon-edit"></i>'), '#' %>
