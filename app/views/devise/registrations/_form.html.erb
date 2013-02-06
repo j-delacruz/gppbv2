@@ -27,6 +27,9 @@
 			<p>
 				<%= f.select :agency_id, Agency.all.map{ |a| [a.name, a.id] }, :prompt=>"- Select Agency -" %>
 			</p>
+				<%= f.text_field :agency_code, :class=>"register_last_name", :placeholder=>"Security Code"%>
+			<p>
+			</p>
 		
 			<p>
 	    		<%= f.text_field :first_name, :class=>"register_first_name", :placeholder=>"First Name" %>
@@ -34,10 +37,6 @@
 			
 			<p>
 				<%= f.text_field :last_name, :class=>"register_last_name", :placeholder=>"Last Name"%>
-			</p>
-			
-			<p>
-				<input type="text" class="register_last_name" placeholder="Security Code">
 			</p>
 			<%= f.submit "Sign up", :class=>"btn btn-primary" %>
 		</div>
