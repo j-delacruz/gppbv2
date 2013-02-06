@@ -16,6 +16,10 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :agency_type_id %>
+    <%= f.select :agency_type_id, AgencyType.all.map{ |at| [at.name, at.id] }%>
+  </div>
+  <div class="field">
     <!--<%= f.label :security_code %><br />-->
     <%= f.hidden_field :security_code, value: (('A'..'Z').to_a + (0..9).to_a).shuffle[0..9].join, :readonly=>true%>
   </div>
