@@ -1,6 +1,9 @@
 Gppbv2::Application.routes.draw do
 
 
+  resources :agency_types
+
+
   resources :project_procurement_management_plans
 
 

@@ -1,4 +1,5 @@
 <h4><%= @agency.name %></h4>
+<h4><%= @agency.agency_type.name %></h4>
 <h6><strong>Security Code:</strong>&nbsp;<%= @agency.security_code %></h6>
 <div>
 	<%= link_to "Add User", new_agency_user_url(@agency), :class => 'btn btn-primary' %>

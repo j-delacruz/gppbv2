@@ -7,6 +7,7 @@
 <thead>
 <tr>
 	<th>Name</th>
+	<th>Agency Types</th>
 	<th>Security Code</th>
 	<th>Members</th>
 	<th>Actions</th>
@@ -18,6 +19,7 @@
 	<% @agencies.each do |agency| %>
 	  <tr>
 	    <td><%= link_to agency.name, agency %></td>
+	    <td><%= agency.agency_type.name %></td>
 	    <td><%= agency.security_code %></td>
 	    <td><%= agency.users.count %></td>
 	    <td>
