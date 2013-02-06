@@ -33,7 +33,8 @@
 			<th rowspan="2">PMO/End-User</th>
 			<th rowspan="2">Procurement Method</th>
 			<th rowspan="2">Project Cost/ ABC PHP</th>
-			<th colspan="18" style="text-align:center;">Procurement Activity</th>
+			<th colspan="15" style="text-align:center;">Procurement Activity</th>
+			<th rowspan="2">Remarks</th>
 			<tr>
 			<th height="90px"><div id="rotate" style="width:65px;">Pre-Procurement Conference</div></th>
 			<th><div id="rotate" style="width:60px">Posting Advertisement</div></th>
@@ -50,13 +51,20 @@
 			<th><div id="rotate" style="width:15px">EB Mode</div></th>
 			<th><div id="rotate" style="width:15px">EB CO</div></th>
 			<th><div id="rotate" style="width:15px">Contract Cost</div></th>
+			
 			</tr>
+
+			
+		
+			
+		
 		</tr>
 	</thead>
 	<tbody>
 		<% @project_procurement_management_plan.projects.each do |project| %>
 		<tr>
 			<td><%= project.code %></td>
+			<td></td>
 			<td></td>
 			<td></td>
 			<td></td>

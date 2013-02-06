@@ -34,7 +34,7 @@
 						<td><%= ppmp.version_num%></td>
 						<td><%= ppmp.year%></td>
 						<td><%= ppmp.ppmp_period_covered_start.try(:strftime,'%b %m,%y')%> to <%= ppmp.ppmp_period_covered_end.try(:strftime,'%b %m,%y')%></td>
-						<td><%=ppmp.description%></td>
+						<td><%=ppmp.description unless ppmp.description.nil?%></td>
 						<td><%= ppmp.user.email %></td>
 						<td><%= ppmp.agency.name %></td>
 						<td><%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %>

@@ -40,12 +40,13 @@
     <%= f.hidden_field :agency_id, value: current_user.agency.id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
-  <div class="actions">
+  	<div id="submit-btn">
 	<% if params[:action] == "new" %>
     	<%= f.submit "Submit", :class=>"btn btn-primary"%>
 	<%else%>
 		<%= f.submit "Update", :class=>"btn btn-primary"%>
 	<%end%>
+	</div>
 	
-  </div>
+ 
 <% end %>
