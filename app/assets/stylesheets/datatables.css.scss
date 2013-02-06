@@ -1,9 +1,9 @@
 /* Table */
 
-table.dataTable {
+#ppmp-form_wrapper table.dataTable {
 	margin: 0 auto;
 	clear: both;
-	width: 100%;
+	width: 150%;
 }
 
 table.dataTable thead th {
@@ -33,10 +33,11 @@ table.dataTable td.dataTables_empty {
 /*
  * Table wrapper
  */
-.dataTables_wrapper {
+#ppmp-form_wrapper.dataTables_wrapper {
 	position: relative;
 	clear: both;
 	*zoom: 1;
+	width:150%;
 }
 
 
