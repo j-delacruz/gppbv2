@@ -1,2 +1,8 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if current_user.admin? %>
+	<h1>Welcome Admin Pages!</h1>
+	<p>Blah blah blah yada yada yada.</p>
+<% else %>
+	<h1>Welcome <%= current_user.agency.name %></h1>
+	<p>Blah blah blah yada yada yada.</p>
+<% end %>
+
