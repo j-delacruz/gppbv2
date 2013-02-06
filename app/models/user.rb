@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
    "#{first_name} #{last_name}"
   end
 
+  private
     def validate_agency_code
        if agency && agency.security_code != agency_code
           errors.add(:base, "Error message")
