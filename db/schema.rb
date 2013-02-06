@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206060144) do
+ActiveRecord::Schema.define(:version => 20130206090914) do
 
   create_table "agencies", :force => true do |t|
     t.string   "name"
@@ -32,31 +32,13 @@ ActiveRecord::Schema.define(:version => 20130206060144) do
     t.string   "name"
     t.integer  "user_id"
     t.integer  "agency_id"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.integer  "version_num"
     t.integer  "year"
     t.text     "description"
     t.datetime "ppmp_period_covered_start"
     t.datetime "ppmp_period_covered_end"
-    t.string   "Pmo_End_User"
-    t.string   "procurement_method"
-    t.float    "project_cost_abc"
-    t.datetime "pre_procurement_conference"
-    t.datetime "ads_post_iaeb"
-    t.datetime "pre_bid_conference"
-    t.datetime "submission_bids"
-    t.datetime "bid_evaluation"
-    t.datetime "post_quali_evaluation"
-    t.datetime "notice_proceed"
-    t.datetime "delivery_completion"
-    t.datetime "acceptance"
-    t.string   "source_of_funds"
-    t.string   "estimate_budget_mode"
-    t.string   "estimate_budget_co"
-    t.float    "contract_cost"
-    t.float    "estimate_budget_total"
-    t.text     "remarks"
   end
 
   create_table "projects", :force => true do |t|
@@ -67,6 +49,25 @@ ActiveRecord::Schema.define(:version => 20130206060144) do
     t.string   "remarks"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.text     "description"
+    t.string   "pmo_end_user"
+    t.string   "procurement_method"
+    t.float    "project_cost"
+    t.datetime "pre_procurement_conference"
+    t.datetime "ads_post_iaeb"
+    t.datetime "pre_bid_conference"
+    t.datetime "submission_bids"
+    t.datetime "bid_evaluation"
+    t.datetime "post_quali_evaluation"
+    t.datetime "notice_proceed"
+    t.datetime "delivery_completion"
+    t.datetime "acceptance"
+    t.string   "source_of_funds"
+    t.float    "estimate_budget_total"
+    t.string   "estimate_budget_mode"
+    t.string   "estimate_budget_co"
+    t.float    "contract_cost"
+    t.datetime "award_contract"
   end
 
   create_table "users", :force => true do |t|

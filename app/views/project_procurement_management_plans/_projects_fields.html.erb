@@ -2,21 +2,60 @@
 	<thead>
 		<tr>
 			<th>Code</th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<th>Contract Package Description</th>
+			<th>PMO/End</th>
+			<th>Procurement Method</th>
+			<th>Project Cost/ABC PHP</th>
+			<th>Pre-Procurement Conference</th>
+			<th>Ads/Post IAEB </th>
+			<th>Pre-Bid Conference</th>
+
+			<th>Submission and Receipt of Bids</th>
+			<th>Bid Evaluation</th>
+			<th>Post Qualification Evaluation</th>
+			<th>Notice to Proceed</th>
+			
+			<th>Award of Contract</th>
+			
+			<th>Delivery Completion</th>
+			<th>Acceptance Turnover</th>
+			<th>Source of Funds</th>
+			<th>Estimated Budget Total</th>
+			<th>Estimated Budget Mode</th>
+			<th>Estimated Budget CO</th>
+			<th>Contract Cost</th>
+			<th>Remarks</th>
+		
 		</tr>
 	</thead>
-	<tbody>
+	<tbody:>
 		<tr>	
 			<td><%= f.text_field :code %></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><%= f.text_field :description %></td>
+			<td><%= f.text_field :pmo_end_user  %></td>
+			<td><%= f.text_field :procurement_method %></td>
+			<td><%= f.text_field :project_cost  %></td>
+			<td><%= f.text_field :pre_procurement_conference  %></td>
+			<td><%= f.text_field :ads_post_iaeb  %></td>
+			<td><%= f.text_field :pre_bid_conference  %></td>
+			<td><%= f.text_field :submission_bids  %></td>
+			<td><%= f.text_field :bid_evaluation %></td>
+			<td><%= f.text_field :post_quali_evaluation  %></td>
+			<td><%= f.text_field :notice_proceed  %></td>
+			<td><%= f.text_field :award_contract  %></td>
+			<td><%= f.text_field :delivery_completion  %></td>
+			<td><%= f.text_field :acceptance  %></td>
+			<td><%= f.text_field   :source_of_funds %></td>
+			<td><%= f.text_field    :estimate_budget_total %></td>
+			<td><%= f.text_field   :estimate_budget_mode  %></td>
+			<td><%= f.text_field :estimate_budget_co  %></td>
+			<td><%= f.text_field    :contract_cost %></td>
+			<td><%= f.text_area    :remarks %></td>
+    	
+    
+    
+   			<td><%   %></td>
+			
 		</tr>
 	</tbody>
 </table>
