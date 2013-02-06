@@ -1,25 +1,28 @@
-<h1>Listing agency_types</h1>
+<br class="clearfix">
+<center><h4>List of agency types</h4></center>
+<table class="table table-bordered table-striped table-hover" id="agency-types">
+	<thead>  
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Actions</th>
+		
+		</tr>
+	</thead>
+	
+	<tbody>
 
-<table class="table table-bordered table-striped table-hover">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @agency_types.each do |agency_type| %>
-  <tr>
-    <td><%= agency_type.name %></td>
-    <td><%= agency_type.description %></td>
-    <td><%= link_to 'Show', agency_type %></td>
-    <td><%= link_to 'Edit', edit_agency_type_path(agency_type) %></td>
-    <td><%= link_to 'Destroy', agency_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+	<% @agency_types.each do |agency_type| %>
+	<tr>
+		<td><%= agency_type.name %></td>
+		<td><%= agency_type.description %>
+		<td><%= link_to raw('<i class="icon-eye-open"></i>'), agency_type %>
+		<%= link_to raw('<i class="icon-edit"></i>'), edit_agency_type_path(agency_type) %>
+		<%= link_to raw('<i class="icon-trash"></i>'), agency_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
 </table>
 
-<br />
+<br class="clearfix"/>
 
-<%= link_to 'New Agency type', new_agency_type_path %>
+<%= link_to 'New Agency type', new_agency_type_path, :class=>"btn btn-primary" %>

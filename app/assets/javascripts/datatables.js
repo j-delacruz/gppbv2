@@ -57,3 +57,10 @@ $(document).ready( function() {
 		"sPaginationType": "full_numbers"
 	} );
 } );
+
+$(document).ready( function() {
+	$('#agency-types').dataTable( {
+		"bJQueryUI": true,
+		"sPaginationType": "full_numbers"
+	} );
+} );
