@@ -7,8 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 users = []
-
-<<<<<<< HEAD
 user1 = User.create!(email: 'admin@example.com', password: 'password', admin: true, first_name: 'Admin', last_name: 'Admin', :username=>'admin' )
 puts user1.email
 
