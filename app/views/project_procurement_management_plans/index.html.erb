@@ -1,28 +1,56 @@
-<h1>Listing project_procurement_management_plans</h1>
-<%= link_to 'New Project procurement management plan', new_project_procurement_management_plan_path %>
-<table class="table table-bordered">
-  <tr>
-    <th>Name</th>
-    <th>User</th>
-    <th>Agency</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<center><h4>List of Project Procurement Management Plans</h4></center>
+<br class="clearfix">
+<br class="clearfix">
 
-<% current_user.agency.project_procurement_management_plans.each do |ppmp| %>
-  <tr>
-    <td><%= ppmp.name %></td>
-    <td><%= ppmp.user.email %></td>
-    <td><%= ppmp.agency.name %></td>
-    <td><%= link_to 'Show', ppmp %></td>
-    <td><%= link_to 'Edit', [:edit, ppmp] %></td>
-    <td><%= link_to 'Destroy', ppmp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<!--html to ruby  use raw | ruby to html use #{}-->
 
-<br />
+<div class="tabbable">
+	<ul id="myTab" class="nav nav-tabs">
+		<li class="active"><a href="#ppmp-list" data-toggle="tab">Project Procurement Management Plans</a></li>
+		<li><a href="#attachments" data-toggle="tab">Attachments</a></li>
+		<%= link_to 'Create New PPMP', new_project_procurement_management_plan_path, :class=>"btn btn-primary pull-right" %>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="ppmp-list">
+			<table class="table table-bordered table-striped table-hover" id="all-ppmps-by-agency">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Version No.</th>
+						<th>Year</th>
+						<th>Period Covered</th>
+						<th>General Description</th>
+						<th>User</th>
+						<th>Agency</th>
+						<th><center>Actions</center></th>
 
+					</tr>
+				</thead>
 
+				<tbody>
+					<% current_user.agency.project_procurement_management_plans.each do |ppmp| %>
+					<tr>
+						<td><%= ppmp.name %></td>
+						<td><%= ppmp.version_num%></td>
+						<td><%= ppmp.year%></td>
+						<td><%= ppmp.ppmp_period_covered_start.try(:strftime,'%b %m,%y')%> to <%= ppmp.ppmp_period_covered_end.try(:strftime,'%b %m,%y')%></td>
+						<td><%=ppmp.description%></td>
+						<td><%= ppmp.user.email %></td>
+						<td><%= ppmp.agency.name %></td>
+						<td><%= link_to  raw('<i class="icon-eye-open"></i>'), ppmp %>
+							<%= link_to  raw('<i class="icon-edit"></i>'), [:edit, ppmp] %>
+							<%= link_to  raw('<i class="icon-trash"></i>'), ppmp, method: :delete, data: { confirm: 'Are you sure?' } %>
+						</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab-pane fade in" id="attachments">
+				Uploaded Files
+			</div>
+		</div>
+	</div>
+	<br style="clear:both;">
+	<%=link_to "Back", :back, :class=>"btn btn-small pull-right"%>
+</div>
 

@@ -15,5 +15,7 @@ db/schema.rb
 /tmp
 
 # Ignore DS Store made by MAC machines
-
 .DS_Store
+
+# Ignore config/database.yml
+config/database.yml

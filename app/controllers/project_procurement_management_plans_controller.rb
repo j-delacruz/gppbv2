@@ -27,7 +27,6 @@ class ProjectProcurementManagementPlansController < ApplicationController
   def new
     @project_procurement_management_plan = current_user.project_procurement_management_plans.build
     1.times { @project_procurement_management_plan.projects.build }
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @project_procurement_management_plan }
@@ -46,7 +45,7 @@ class ProjectProcurementManagementPlansController < ApplicationController
 
     respond_to do |format|
       if @project_procurement_management_plan.save
-        format.html { redirect_to @project_procurement_management_plan, notice: 'Project procurement management plan was successfully created.' }
+        format.html { redirect_to @project_procurement_management_plan, notice:"#{@project_procurement_management_plan.ppmp_form_name} was successfully created." }
         format.json { render json: @project_procurement_management_plan, status: :created, location: @project_procurement_management_plan }
       else
         format.html { render action: "new" }
@@ -62,7 +61,7 @@ class ProjectProcurementManagementPlansController < ApplicationController
 
     respond_to do |format|
       if @project_procurement_management_plan.update_attributes(params[:project_procurement_management_plan])
-        format.html { redirect_to @project_procurement_management_plan, notice: 'Project procurement management plan was successfully updated.' }
+        format.html { redirect_to @project_procurement_management_plan, notice: "#{@project_procurement_management_plan.ppmp_form_name} was successfully updated." }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -78,7 +77,7 @@ class ProjectProcurementManagementPlansController < ApplicationController
     @project_procurement_management_plan.destroy
 
     respond_to do |format|
-      format.html { redirect_to project_procurement_management_plans_url }
+      format.html { redirect_to project_procurement_management_plans_url, notice:"#{@project_procurement_management_plan.ppmp_form_name} was successfully deleted!" }
       format.json { head :no_content }
     end
   end

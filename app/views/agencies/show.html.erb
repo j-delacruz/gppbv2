@@ -1,15 +1,17 @@
-<p id="notice"><%= notice %></p>
 <h4><%= @agency.name %></h4>
-Security Code:<h6><%= @agency.security_code %></h6>
+<h6><strong>Security Code:</strong>&nbsp;<%= @agency.security_code %></h6>
 <div>
 	<%= link_to "Add User", new_agency_user_url(@agency), :class => 'btn btn-primary' %>
 	<%= link_to 'Edit', edit_agency_path(@agency),:class=>"btn btn-primary" %>
-	<%= link_to 'Back', agencies_path, :class=>"btn btn-primary" %>
+	<br class="clearfix">
+	<br class="clearfix">
+	<%= link_to 'Back', agencies_path, :class=>"btn btn-small" %>
 </div>
-<br class="clearfix">
+<center><h5>List of Users</h5></center>
 <%= render 'users' %>
 <br class="clearfix">
 <br class="clearfix">
+<center><h5>List of Project Procurement Management Plans</h5></center>
 <%= render 'project_procurement_management_plans' %>
 
 

@@ -46,7 +46,7 @@ class AgenciesController < ApplicationController
 
     respond_to do |format|
       if @agency.save
-        format.html { redirect_to @agency, notice: 'Agency was successfully created.' }
+        format.html { redirect_to @agency, notice: "#{@agency.name} was successfully created." }
         format.json { render json: @agency, status: :created, location: @agency }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class AgenciesController < ApplicationController
 
     respond_to do |format|
       if @agency.update_attributes(params[:agency])
-        format.html { redirect_to @agency, notice: 'Agency was successfully updated.' }
+        format.html { redirect_to @agency, notice: "#{@agency.name} was successfully updated." }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -78,7 +78,7 @@ class AgenciesController < ApplicationController
     @agency.destroy
 
     respond_to do |format|
-      format.html { redirect_to agencies_url }
+      format.html { redirect_to agencies_url, notice: "#{@agency.name} was successfully deleted!" }
       format.json { head :no_content }
     end
   end

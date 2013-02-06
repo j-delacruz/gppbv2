@@ -15,8 +15,8 @@
 			<td><%= user.email %></td>
 			<td></td>
 			<td>
-				<%= link_to "Edit", '#' %> 
-				<%= link_to "Delete", [@agency, user], method: :delete %>
+				<%= link_to raw('<i class="icon-edit"></i>'), [:edit, @agency, user] %> 
+				<%= link_to raw('<i class="icon-trash"></i>'), [@agency, user], method: :delete %>
 			</td>
 		</tr>
 		<% end %>

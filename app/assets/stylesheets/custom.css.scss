@@ -29,5 +29,27 @@ $textColor:						  #000000 ;
 	margin-top:-0.2%;
 }
 
+/* Alert Message */
+.alert{
+	font-size:12px;
+	font-weight:bold;
+	color:#333;
+}
 
 /* Table */
+
+.table{
+	font-size:8pt;
+}
+
+.table-ppmp{
+	font-size:6pt;
+}
+
+
+/* Rotate Text */
+#rotate{
+-webkit-transform: rotate(-90deg); 
+-moz-transform: rotate(-90deg);
+
+}
