@@ -13,9 +13,9 @@ user1 = User.create!(email: 'admin@example.com', password: 'password', admin: tr
 puts user1.email
 
 agency0 = Agency.create!(name: 'Admin', security_code: 'HKT3FD56R1')
-agency1 = Agency.create!(name: 'James Agency', security_code: 'HKT3FD56R1')
-agency2 = Agency.create!(name: 'Shiela Agency', security_code: 'KAY634HG&')
-agency3 = Agency.create!(name: 'Vieve Agency', security_code: 'KSJHSNUA8U')
+agency1 = Agency.create!(name: 'James Agency', security_code: 'AGENCY0001')
+agency2 = Agency.create!(name: 'Shiela Agency', security_code: 'AGENCY0002')
+agency3 = Agency.create!(name: 'Vieve Agency', security_code: 'AGENCY0003')
 
 user2 = User.create!(email: 'james@example.com', password: 'password', agency_id: 1, first_name: 'James', last_name: 'Dela Cruz', :username=>'jdelacruz')
 puts user2.email
