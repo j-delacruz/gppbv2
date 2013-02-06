@@ -50,3 +50,10 @@ $(document).ready( function() {
 		"sPaginationType": "full_numbers"
 	} );
 } );
+
+$(document).ready( function() {
+	$('#ppmp-uploaded-files').dataTable( {
+		"bJQueryUI": true,
+		"sPaginationType": "full_numbers"
+	} );
+} );
