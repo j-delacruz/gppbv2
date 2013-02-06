@@ -1,7 +1,9 @@
+<br class="clearfix"/>
+<div id="form-body">
 <p id="notice"><%= notice %></p>
 
 <p>
-	<h4><b><%= @project_procurement_management_plan.ppmp_form_name %></b></h4>
+	<div id="ppmp-form-title"><center><h4><b><%= @project_procurement_management_plan.ppmp_form_name %></b></h4></center></div>
 </p>
 
 <p>
@@ -12,7 +14,11 @@
 
 <p>
 	<b>General Description:</b>
-	<%= @project_procurement_management_plan.description %>
+	<% if @project_procurement_plan.nil?%>
+	N/A
+	<%else%>
+	<%= @project_procurement_management_plan.description%>
+	<% end %>
 </p>
 
 <p>
@@ -28,12 +34,15 @@
 
 <%= render 'projects' %>
 
+
+
 <a href="#" onclick="window.print();return false;" class="btn btn-primary">Print</a>
 <a href="#" onclick="alert('Export me!')" class="btn btn-primary">Export to PDF</a> 
 <a href="#" onclick="alert('Export me!')" class="btn btn-primary">Export to Excel</a> 
 <a href="#" onclick="alert('Attach me!')" class="btn btn-primary">Attach File</a> 
 <%= link_to 'Edit', edit_project_procurement_management_plan_path(@project_procurement_management_plan), :class=>"btn btn-primary pull-right" %>
-<br>
-<br>
-<br>
+<br class="clearfix"/>
+
+</div>
+<br class="clearfix"/>
 <%= link_to 'Back', project_procurement_management_plans_path, :class=>"btn btn-mini"%>

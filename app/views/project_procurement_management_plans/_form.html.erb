@@ -2,7 +2,6 @@
   <% if @project_procurement_management_plan.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project_procurement_management_plan.errors.count, "error") %> prohibited this project_procurement_management_plan from being saved:</h2>
-
       <ul>
       <% @project_procurement_management_plan.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -13,10 +12,10 @@
 
   <div class="field">
 	<div class="row">
-		<div class="span5">
-			<%= f.label :name %>
+		<div class="span4" id="ppmp-fields">
+			<b><%= f.label :name %></b>
 			<%= f.text_field :name, :value=>"Project Procurement Management Plan",:readonly => true, :style=>"font-size:8.6pt;" %>
-			<%= f.label "Version Number" %>
+			<strong><%= f.label "Version Number" %></strong>
 			<%= f.text_field :version_num%>
 			<%= f.label :year%>
 			<%= f.select :year, 2012..2030 %>
@@ -27,9 +26,9 @@
 			<br class="clearfix">
 			<%= f.text_field :ppmp_period_covered_end, :class=>"datepick", :placeholder=>"End Date"%>
 		</div>
-		<div class="span4">
+		<div class="span5">
 			<%= f.label "General Description" %>
-			<%= f.text_area :description, :rows=>5%>
+			<%= f.text_area :description, :rows=>7, :style=>"width:350px;"%>
 		</div>
 	</div>
   </div>
