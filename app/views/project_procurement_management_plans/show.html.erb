@@ -8,8 +8,8 @@
 
 <p>
 	<b>Period Covered:</b>
-	<%= @project_procurement_management_plan.ppmp_period_covered_start.try(:strftime,'%b %m,%y') %> to 	
-	<%= @project_procurement_management_plan.ppmp_period_covered_end.try(:strftime,'%b %m,%y') %>
+	<%= @project_procurement_management_plan.ppmp_period_covered_start.try(:strftime,'%b %m,%Y') %> to 	
+	<%= @project_procurement_management_plan.ppmp_period_covered_end.try(:strftime,'%b %m,%Y') %>
 </p>
 
 <p>
@@ -31,10 +31,7 @@
   <%= @project_procurement_management_plan.agency.name %>
 </p>
 
-
 <%= render 'projects' %>
-
-
 
 <a href="#" onclick="window.print();return false;" class="btn btn-primary">Print</a>
 <a href="#" onclick="alert('Export me!')" class="btn btn-primary">Export to PDF</a> 
